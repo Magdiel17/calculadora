@@ -10,10 +10,11 @@ package calculadora;
  * @author MAGDIEL
  */
 public class Interfaz_Calculadora extends javax.swing.JFrame {
-
     /**
      * Creates new form Interfaz_Calculadora
      */
+    String memoria1;
+    String memoria2;
     public Interfaz_Calculadora() {
         initComponents();
          setLocationRelativeTo(null);
@@ -107,12 +108,27 @@ public class Interfaz_Calculadora extends javax.swing.JFrame {
 
         btn_6.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         btn_6.setText("6");
+        btn_6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_6ActionPerformed(evt);
+            }
+        });
 
         btn_9.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         btn_9.setText("9");
+        btn_9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_9ActionPerformed(evt);
+            }
+        });
 
         btn_3.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         btn_3.setText("3");
+        btn_3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_3ActionPerformed(evt);
+            }
+        });
 
         btn_igual.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         btn_igual.setText("=");
@@ -134,24 +150,59 @@ public class Interfaz_Calculadora extends javax.swing.JFrame {
 
         btn_7.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         btn_7.setText("7");
+        btn_7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_7ActionPerformed(evt);
+            }
+        });
 
         btn_0.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         btn_0.setText("0");
+        btn_0.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_0ActionPerformed(evt);
+            }
+        });
 
         btn_4.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         btn_4.setText("4");
+        btn_4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_4ActionPerformed(evt);
+            }
+        });
 
         btn_1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         btn_1.setText("1");
+        btn_1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_1ActionPerformed(evt);
+            }
+        });
 
         btn_2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         btn_2.setText("2");
+        btn_2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_2ActionPerformed(evt);
+            }
+        });
 
         btn_5.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         btn_5.setText("5");
+        btn_5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_5ActionPerformed(evt);
+            }
+        });
 
         btn_8.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         btn_8.setText("8");
+        btn_8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_8ActionPerformed(evt);
+            }
+        });
 
         btn_suma.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         btn_suma.setText("+");
@@ -230,7 +281,6 @@ public class Interfaz_Calculadora extends javax.swing.JFrame {
                 .addComponent(txt_formula, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0)
                 .addComponent(txt_ingreso, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(30, 30, 30)
@@ -320,6 +370,56 @@ public class Interfaz_Calculadora extends javax.swing.JFrame {
             txt_ingreso.setText("0");
         }
     }//GEN-LAST:event_txt_ingresoFocusLost
+
+    private void btn_1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_1ActionPerformed
+        // TODO add your handling code here:
+         txt_ingreso.setText(txt_ingreso.getText()+"1");
+    }//GEN-LAST:event_btn_1ActionPerformed
+
+    private void btn_2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_2ActionPerformed
+        // TODO add your handling code here:
+         txt_ingreso.setText(txt_ingreso.getText()+"2");
+    }//GEN-LAST:event_btn_2ActionPerformed
+
+    private void btn_3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_3ActionPerformed
+        // TODO add your handling code here:
+         txt_ingreso.setText(txt_ingreso.getText()+"3");
+    }//GEN-LAST:event_btn_3ActionPerformed
+
+    private void btn_4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_4ActionPerformed
+        // TODO add your handling code here:
+         txt_ingreso.setText(txt_ingreso.getText()+"4");
+    }//GEN-LAST:event_btn_4ActionPerformed
+
+    private void btn_5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_5ActionPerformed
+        // TODO add your handling code here:
+         txt_ingreso.setText(txt_ingreso.getText()+"5");
+    }//GEN-LAST:event_btn_5ActionPerformed
+
+    private void btn_6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_6ActionPerformed
+        // TODO add your handling code here:
+         txt_ingreso.setText(txt_ingreso.getText()+"6");
+    }//GEN-LAST:event_btn_6ActionPerformed
+
+    private void btn_7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_7ActionPerformed
+        // TODO add your handling code here:
+         txt_ingreso.setText(txt_ingreso.getText()+"7");
+    }//GEN-LAST:event_btn_7ActionPerformed
+
+    private void btn_8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_8ActionPerformed
+        // TODO add your handling code here:
+         txt_ingreso.setText(txt_ingreso.getText()+"8");
+    }//GEN-LAST:event_btn_8ActionPerformed
+
+    private void btn_9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_9ActionPerformed
+        // TODO add your handling code here:
+         txt_ingreso.setText(txt_ingreso.getText()+"9");
+    }//GEN-LAST:event_btn_9ActionPerformed
+
+    private void btn_0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_0ActionPerformed
+        // TODO add your handling code here:
+         txt_ingreso.setText(txt_ingreso.getText()+"0");
+    }//GEN-LAST:event_btn_0ActionPerformed
 
     /**
      * @param args the command line arguments
