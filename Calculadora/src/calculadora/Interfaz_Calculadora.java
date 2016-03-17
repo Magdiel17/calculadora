@@ -13,8 +13,9 @@ public class Interfaz_Calculadora extends javax.swing.JFrame {
     /**
      * Creates new form Interfaz_Calculadora
      */
-    String memoria1;
-    String memoria2;
+    private Boolean igual, inicio = true, operacion1, operacion2;
+    private double a, b, c, memoria = 0, resultado, valor1, valor2;
+    private String cadena, funciones, tipo_Operaciones;
     public Interfaz_Calculadora() {
         initComponents();
          setLocationRelativeTo(null);
@@ -105,6 +106,11 @@ public class Interfaz_Calculadora extends javax.swing.JFrame {
 
         btn_coma.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         btn_coma.setText(",");
+        btn_coma.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_comaActionPerformed(evt);
+            }
+        });
 
         btn_6.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         btn_6.setText("6");
@@ -135,12 +141,27 @@ public class Interfaz_Calculadora extends javax.swing.JFrame {
 
         btn_resta.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         btn_resta.setText("-");
+        btn_resta.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_restaActionPerformed(evt);
+            }
+        });
 
         btn_multiplicacion.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         btn_multiplicacion.setText("*");
+        btn_multiplicacion.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_multiplicacionActionPerformed(evt);
+            }
+        });
 
         btn_division.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         btn_division.setText("/");
+        btn_division.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_divisionActionPerformed(evt);
+            }
+        });
 
         btn_MOD.setFont(new java.awt.Font("Tahoma", 0, 8)); // NOI18N
         btn_MOD.setText("MOD");
@@ -206,6 +227,11 @@ public class Interfaz_Calculadora extends javax.swing.JFrame {
 
         btn_suma.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         btn_suma.setText("+");
+        btn_suma.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_sumaActionPerformed(evt);
+            }
+        });
 
         btn_borrar_un_numero.setFont(new java.awt.Font("Arial", 1, 10)); // NOI18N
         btn_borrar_un_numero.setText("◄");
@@ -373,54 +399,256 @@ public class Interfaz_Calculadora extends javax.swing.JFrame {
 
     private void btn_1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_1ActionPerformed
         // TODO add your handling code here:
-         txt_ingreso.setText(txt_ingreso.getText()+"1");
+       if (inicio == true) {
+            txt_ingreso.setText(" ");
+            txt_ingreso.setText("1");
+            inicio = false;
+        } else {
+            txt_ingreso.setText(txt_ingreso.getText() + "1");
+        }
     }//GEN-LAST:event_btn_1ActionPerformed
 
     private void btn_2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_2ActionPerformed
         // TODO add your handling code here:
-         txt_ingreso.setText(txt_ingreso.getText()+"2");
+           if (inicio == true) {
+            txt_ingreso.setText(" ");
+            txt_ingreso.setText("2");
+            inicio = false;
+        } else {
+            txt_ingreso.setText(txt_ingreso.getText() + "2");
+        }
     }//GEN-LAST:event_btn_2ActionPerformed
 
     private void btn_3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_3ActionPerformed
         // TODO add your handling code here:
-         txt_ingreso.setText(txt_ingreso.getText()+"3");
+           if (inicio == true) {
+            txt_ingreso.setText(" ");
+            txt_ingreso.setText("3");
+            inicio = false;
+        } else {
+            txt_ingreso.setText(txt_ingreso.getText() + "3");
+        }
     }//GEN-LAST:event_btn_3ActionPerformed
 
     private void btn_4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_4ActionPerformed
         // TODO add your handling code here:
-         txt_ingreso.setText(txt_ingreso.getText()+"4");
+         if (inicio == true) {
+            txt_ingreso.setText(" ");
+            txt_ingreso.setText("4");
+            inicio = false;
+        } else {
+            txt_ingreso.setText(txt_ingreso.getText() + "4");
+        }
     }//GEN-LAST:event_btn_4ActionPerformed
 
     private void btn_5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_5ActionPerformed
         // TODO add your handling code here:
-         txt_ingreso.setText(txt_ingreso.getText()+"5");
+           if (inicio == true) {
+            txt_ingreso.setText(" ");
+            txt_ingreso.setText("5");
+            inicio = false;
+        } else {
+            txt_ingreso.setText(txt_ingreso.getText() + "5");
+        }
     }//GEN-LAST:event_btn_5ActionPerformed
 
     private void btn_6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_6ActionPerformed
         // TODO add your handling code here:
-         txt_ingreso.setText(txt_ingreso.getText()+"6");
+           if (inicio == true) {
+            txt_ingreso.setText(" ");
+            txt_ingreso.setText("6");
+            inicio = false;
+        } else {
+            txt_ingreso.setText(txt_ingreso.getText() + "6");
+        }
     }//GEN-LAST:event_btn_6ActionPerformed
 
     private void btn_7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_7ActionPerformed
         // TODO add your handling code here:
-         txt_ingreso.setText(txt_ingreso.getText()+"7");
+           if (inicio == true) {
+            txt_ingreso.setText(" ");
+            txt_ingreso.setText("7");
+            inicio = false;
+        } else {
+            txt_ingreso.setText(txt_ingreso.getText() + "7");
+        }
     }//GEN-LAST:event_btn_7ActionPerformed
 
     private void btn_8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_8ActionPerformed
         // TODO add your handling code here:
-         txt_ingreso.setText(txt_ingreso.getText()+"8");
+           if (inicio == true) {
+            txt_ingreso.setText(" ");
+            txt_ingreso.setText("8");
+            inicio = false;
+        } else {
+            txt_ingreso.setText(txt_ingreso.getText() + "8");
+        }
     }//GEN-LAST:event_btn_8ActionPerformed
 
     private void btn_9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_9ActionPerformed
         // TODO add your handling code here:
-         txt_ingreso.setText(txt_ingreso.getText()+"9");
+        if (inicio == true) {
+            txt_ingreso.setText(" ");
+            txt_ingreso.setText("9");
+            inicio = false;
+        } else {
+            txt_ingreso.setText(txt_ingreso.getText() + "9");
+        }
     }//GEN-LAST:event_btn_9ActionPerformed
 
     private void btn_0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_0ActionPerformed
         // TODO add your handling code here:
-         txt_ingreso.setText(txt_ingreso.getText()+"0");
+          if (inicio == true) {
+            txt_ingreso.setText(" ");
+            txt_ingreso.setText("0");
+            inicio = false;
+        } else {
+            txt_ingreso.setText(txt_ingreso.getText() + "0");
+        }
     }//GEN-LAST:event_btn_0ActionPerformed
 
+    private void btn_comaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_comaActionPerformed
+        // TODO add your handling code here:
+          if (txt_ingreso.getText().contains(".")) {
+        } else {
+            txt_ingreso.setText(txt_ingreso.getText() + ".");
+            inicio = false;
+        }
+    }//GEN-LAST:event_btn_comaActionPerformed
+
+    private void btn_sumaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_sumaActionPerformed
+        // TODO add your handling code here:
+          igual = true;
+        inicio = true;
+        //condicion operacion suma
+        if (operacion1 = true) {
+            valor1 = Double.parseDouble(txt_ingreso.getText());
+            double backupValue = (Double) valor1;
+            txt_formula.setText(" ");
+            txt_formula.setText(backupValue + " " + "+" + " ");
+            operacion1 = false;
+        } else {
+
+            if (operacion2 = true) {
+                valor2 = Double.parseDouble(txt_ingreso.getText());
+                txt_formula.setText(" ");
+                txt_formula.setText(txt_formula.getText() + "+");
+                operacion2 = false;
+            } else {
+                txt_formula.setText(txt_formula.getText() + "+");
+                operaciones(resultado, valor2);
+            }
+        }
+        tipo_Operaciones = "+";
+    }//GEN-LAST:event_btn_sumaActionPerformed
+
+    private void btn_restaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_restaActionPerformed
+        // TODO add your handling code here:igual = true;
+        inicio = true;
+        //condicion operacion resta
+        if (operacion1 = true) {
+            valor1 = Double.parseDouble(txt_ingreso.getText());
+            double backupValue = (double) valor1;
+            txt_formula.setText(" ");
+            txt_formula.setText(backupValue + " " + "-" + " ");
+            operacion1 = false;
+        } else {
+
+            if (operacion2 = true) {
+                valor2 = Double.parseDouble(txt_ingreso.getText());
+                txt_formula.setText(" ");
+                txt_formula.setText(txt_formula.getText() + "-");
+                operacion2 = false;
+            } else {
+                txt_formula.setText(txt_formula.getText() + "-");
+                operaciones(resultado, valor2);
+            }
+        }
+        tipo_Operaciones = "-";
+    }//GEN-LAST:event_btn_restaActionPerformed
+
+    private void btn_multiplicacionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_multiplicacionActionPerformed
+        // TODO add your handling code here: igual = true;
+        inicio = true;
+        //condion para multiplicar
+        if (operacion1 = true) {
+            valor1 = Double.parseDouble(txt_ingreso.getText());
+            double backupValue = (double) valor1;
+            txt_formula.setText(" ");
+            txt_formula.setText(backupValue + " " + "*" + " ");
+            operacion1 = false;
+        } else {
+            //condicion operacion2
+            if (operacion2 = true) {
+                valor2 = Double.parseDouble(txt_ingreso.getText());
+                txt_formula.setText(" ");
+                txt_formula.setText(txt_formula.getText() + "*");
+                operacion2 = false;
+            } else {
+                txt_formula.setText(txt_formula.getText() + "*");
+                operaciones(resultado, valor2);
+            }
+        }
+        tipo_Operaciones = "*";
+    }//GEN-LAST:event_btn_multiplicacionActionPerformed
+
+    private void btn_divisionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_divisionActionPerformed
+        // TODO add your handling code here: igual = true;
+        inicio = true;
+        //condion para la variable operacion1
+        if (operacion1 = true) {
+            valor1 = Double.parseDouble(txt_ingreso.getText());
+            double backupValue = (double) valor1;
+            txt_formula.setText(" ");
+            txt_formula.setText(backupValue + " " + "/" + " ");
+            operacion1 = false;
+        } else {
+            //condicion operacion2
+            if (operacion2 = true) {
+                valor2 = Double.parseDouble(txt_ingreso.getText());
+                txt_formula.setText(" ");
+                txt_formula.setText(txt_formula.getText() + "/");
+                operacion2 = false;
+            } else {
+                txt_formula.setText(txt_formula.getText() + "/");
+                operaciones(resultado, valor2);
+            }
+        }
+        tipo_Operaciones = "/";
+    }//GEN-LAST:event_btn_divisionActionPerformed
+ private void operaciones(double valor1, double valor2) {
+        switch (tipo_Operaciones) {
+            //case funcion suma
+            case "+":
+                resultado = valor1 + valor2;
+                txt_ingreso.setText(resultado + "");
+                valor1 = Double.parseDouble(txt_ingreso.getText());
+                break;
+            //case funcion resta   
+            case "-":
+                resultado = valor1 - valor2;
+                txt_ingreso.setText(resultado + "");
+                valor1 = Double.parseDouble(txt_ingreso.getText());
+                break;
+            //case fincion multiplicacion
+            case "*":
+                resultado = valor1 * valor2;
+                txt_ingreso.setText(resultado + "");
+                valor1 = Double.parseDouble(txt_ingreso.getText());
+                break;
+            //case funcion division
+            case "/":
+                if (valor2 == 0) {
+                    txt_ingreso.setText("error");
+                    break;
+                } else {
+
+                    resultado = valor1 / valor2;
+                    txt_ingreso.setText(resultado + "");
+                    valor1 = Double.parseDouble(txt_ingreso.getText());
+                    break;
+                }
+        }}
     /**
      * @param args the command line arguments
      */
